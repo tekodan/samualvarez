@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "astro dev --host",
     "build": "astro build",
+    "start": "npx serve dist -l 4321",
     "serve": "npx serve dist -l 4321",
     "preview": "astro preview",
     "astro": "astro"
