@@ -1,0 +1,350 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import siteData from '../data/site.json';
+
+const pageTitle = `${siteData.about.title} · ${siteData.shortName}`;
+---
+
+<Layout title={pageTitle}>
+  <Navbar />
+
+  <main id="main-content" class="page">
+    <div class="container">
+      <header class="page__header">
+        <p class="page__breadcrumb">
+          <a href="/">Inicio</a> / {siteData.about.title}
+        </p>
+        <h1 class="page__title">{siteData.about.title}</h1>
+      </header>
+
+      <div class="page__content">
+        <div class="bio">
+          <div class="bio__avatar">
+            <img src="/images/profile.jpg" alt={siteData.name} class="bio__avatar-img" />
+          </div>
+
+          <div class="bio__text">
+            <p>
+              Soy estudiante de <strong>Administración de Empresas</strong> en la Universidad de Antioquia y <strong>Barista certificado</strong> por la Specialty Coffee Association (SCA) en niveles Básico y Medio. Mi pasión por el café de especialidad se combina con una sólida formación en gestión empresarial, lo que me permite entender el negocio desde la barra hasta la administración.
+            </p>
+            <p>
+              Con experiencia en el sector de alimentos y bebidas —especialmente en ventas B2B y metodologías de <em>Design Thinking</em>— me enfoco en mejorar la eficiencia operativa y la experiencia del cliente.
+            </p>
+            <p>
+              Disfruto trabajar bajo presión, liderar equipos y ofrecer resultados con <strong>creatividad</strong> y <strong>organización</strong>. Cada taza que preparo refleja mi compromiso con la excelencia y el servicio.
+            </p>
+          </div>
+        </div>
+
+        <div class="bio__sections">
+          <div class="bio__section">
+            <h2>Atributos personales</h2>
+            <div class="bio__tags">
+              {['Creativo', 'Adaptable', 'Organizado', 'Problem Solver', 'Trabajo en equipo'].map(attr => (
+                <span class="bio__tag">{attr}</span>
+              ))}
+            </div>
+          </div>
+
+          <div class="bio__section">
+            <h2>Idiomas</h2>
+            <div class="bio__langs">
+              <div class="bio__lang">
+                <div class="bio__lang-header">
+                  <span>Español</span>
+                  <span>Nativo — 100%</span>
+                </div>
+                <div class="bio__lang-bar"><div class="bio__lang-fill" style="width:100%"></div></div>
+              </div>
+              <div class="bio__lang">
+                <div class="bio__lang-header">
+                  <span>Inglés</span>
+                  <span>B2 Certificado — 85%</span>
+                </div>
+                <div class="bio__lang-bar"><div class="bio__lang-fill" style="width:85%"></div></div>
+              </div>
+              <div class="bio__lang">
+                <div class="bio__lang-header">
+                  <span>LSC (Lengua de Señas Colombiana)</span>
+                  <span>Básico — 25%</span>
+                </div>
+                <div class="bio__lang-bar"><div class="bio__lang-fill" style="width:25%"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bio__section">
+            <h2>Experiencia laboral</h2>
+            <div class="bio__timeline">
+              <div class="bio__timeline-item">
+                <span class="bio__timeline-dot"></span>
+                <div>
+                  <h3>Auxiliar de Barra</h3>
+                  <p class="bio__timeline-place">Más Frutas — Pasto</p>
+                  <p class="bio__timeline-date">Febrero 2023 – Octubre 2023</p>
+                  <p>Atención al cliente, preparación de bebidas, manejo de inventarios y apoyo en operaciones de la barra.</p>
+                </div>
+              </div>
+              <div class="bio__timeline-item">
+                <span class="bio__timeline-dot"></span>
+                <div>
+                  <h3>Auxiliar de Barista y de Caja</h3>
+                  <p class="bio__timeline-place">Macadamia Repostería Gourmet — Pasto</p>
+                  <p class="bio__timeline-date">Marzo 2022 – Octubre 2022</p>
+                  <p>Preparación de café de especialidad, atención al cliente, manejo de caja y apoyo en repostería.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bio__section">
+            <h2>Educación</h2>
+            <div class="bio__edu">
+              <p><strong>Pregrado en Administración de Empresas</strong></p>
+              <p class="bio__timeline-place">Universidad de Antioquia — 2024 · Presente</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bio__cta">
+          <a href="/#contact" class="btn">Contáctame</a>
+          <a href="/articles" class="btn btn--outline">Leer blog</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .page {
+    padding: var(--space-12) 0;
+  }
+
+  .page__header {
+    text-align: center;
+    margin-bottom: var(--space-10);
+  }
+
+  .page__breadcrumb {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    margin: 0 0 var(--space-2);
+  }
+
+  .page__breadcrumb a {
+    color: var(--color-primary);
+    text-decoration: none;
+  }
+
+  .page__breadcrumb a:hover {
+    color: var(--color-secondary);
+  }
+
+  .page__title {
+    font-size: var(--text-3xl);
+    font-weight: 700;
+    color: var(--color-secondary);
+    letter-spacing: 0.05em;
+  }
+
+  .page__content {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .bio {
+    display: flex;
+    gap: var(--space-8);
+    align-items: flex-start;
+    padding-bottom: var(--space-8);
+    border-bottom: 1px solid rgba(201,162,39,0.15);
+  }
+
+  .bio__avatar {
+    width: 120px;
+    height: 120px;
+    min-width: 120px;
+    border-radius: 50%;
+    border: 3px solid var(--color-primary);
+    overflow: hidden;
+    background: var(--color-bg-mid);
+  }
+
+  .bio__avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .bio__text p {
+    color: var(--color-text);
+    line-height: var(--leading-relaxed);
+    margin: 0 0 var(--space-4);
+  }
+
+  .bio__text p:last-child {
+    margin-bottom: 0;
+  }
+
+  .bio__sections {
+    margin-top: var(--space-8);
+  }
+
+  .bio__section {
+    margin-bottom: var(--space-8);
+    padding-bottom: var(--space-8);
+    border-bottom: 1px solid rgba(201,162,39,0.1);
+  }
+
+  .bio__section:last-child {
+    border-bottom: none;
+  }
+
+  .bio__section h2 {
+    font-family: var(--font-heading);
+    font-size: var(--text-xl);
+    color: var(--color-primary);
+    margin: 0 0 var(--space-4);
+    letter-spacing: 0.05em;
+  }
+
+  .bio__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+  }
+
+  .bio__tag {
+    padding: var(--space-1) var(--space-3);
+    border: 1px solid var(--color-primary);
+    color: var(--color-primary);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .bio__langs {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+
+  .bio__lang-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--text-sm);
+    color: var(--color-text);
+    margin-bottom: var(--space-1);
+  }
+
+  .bio__lang-bar {
+    height: 6px;
+    background: var(--color-bg-light);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+  }
+
+  .bio__lang-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+    border-radius: var(--radius-sm);
+    transition: width 1s ease;
+  }
+
+  .bio__timeline {
+    position: relative;
+  }
+
+  .bio__timeline::before {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 8px;
+    bottom: 8px;
+    width: 2px;
+    background: var(--color-bg-light);
+  }
+
+  .bio__timeline-item {
+    position: relative;
+    padding-left: var(--space-6);
+    margin-bottom: var(--space-6);
+  }
+
+  .bio__timeline-item:last-child {
+    margin-bottom: 0;
+  }
+
+  .bio__timeline-dot {
+    position: absolute;
+    left: 0;
+    top: 6px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--color-primary);
+    border: 2px solid var(--color-bg-deep);
+  }
+
+  .bio__timeline-item h3 {
+    font-size: var(--text-base);
+    color: var(--color-secondary);
+    margin: 0 0 var(--space-1);
+  }
+
+  .bio__timeline-place {
+    font-size: var(--text-sm);
+    color: var(--color-primary);
+    margin: 0 0 var(--space-1);
+  }
+
+  .bio__timeline-date {
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin: 0 0 var(--space-2);
+  }
+
+  .bio__timeline-item p {
+    color: var(--color-text-muted);
+    font-size: var(--text-sm);
+    margin: 0;
+  }
+
+  .bio__edu p {
+    color: var(--color-text);
+    margin: 0 0 var(--space-1);
+  }
+
+  .bio__cta {
+    display: flex;
+    gap: var(--space-4);
+    justify-content: center;
+    padding-top: var(--space-8);
+    margin-top: var(--space-8);
+    border-top: 1px solid rgba(201,162,39,0.15);
+  }
+
+  @media (max-width: 640px) {
+    .bio {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .page__title {
+      font-size: var(--text-2xl);
+    }
+
+    .bio__cta {
+      flex-direction: column;
+    }
+  }
+</style>

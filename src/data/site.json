@@ -1,0 +1,293 @@
+{
+  "name": "Ian Samuel Álvarez",
+  "shortName": "SAMU",
+  "established": "2026",
+  "phone": "+57 311 3427431",
+  "email": "ian.alvarez@udea.edu.co",
+  "address": {
+    "full": "Medellín, Antioquia, Colombia",
+    "short": "Medellín, Colombia",
+    "crossStreets": ""
+  },
+  "coordinates": {
+    "lat": 6.2476,
+    "lng": -75.5658
+  },
+  "openingHours": {
+    "weekday": "Café de especialidad · Atención personalizada · Servicio a domicilio",
+    "weekend": "Disponible para eventos · Talleres de café · Catas",
+    "holiday": null
+  },
+  "tagline": "Transformando granos en experiencias. Barista certificado SCA con pasión por el café de especialidad.",
+  "menu": [
+    {
+      "category": "Certificaciones",
+      "items": [
+        {
+          "name": "Barista Skills SCA — Nivel Básico",
+          "description": "Specialty Coffee Association · 2026",
+          "badge": "featured"
+        },
+        {
+          "name": "Barista Skills SCA — Nivel Medio",
+          "description": "Specialty Coffee Association · 2026",
+          "badge": "featured"
+        },
+        {
+          "name": "Manipulación de Alimentos",
+          "description": "Alianza Capacitarte · 2026",
+          "badge": null
+        },
+        {
+          "name": "Certificación B2 Inglés",
+          "description": "Academia Brighton (Pasto) · 2023",
+          "badge": null
+        }
+      ]
+    },
+    {
+      "category": "Habilidades",
+      "items": [
+        {
+          "name": "Servicio al cliente",
+          "description": "Atención personalizada y gestión de experiencia",
+          "badge": null
+        },
+        {
+          "name": "Design Thinking",
+          "description": "Innovación y mejora de procesos",
+          "badge": null
+        },
+        {
+          "name": "Ventas B2B",
+          "description": "Relaciones comerciales y negociación",
+          "badge": null
+        },
+        {
+          "name": "Contabilidad e inventarios",
+          "description": "Control de costos y gestión de insumos",
+          "badge": null
+        }
+      ]
+    }
+  ],
+  "transit": [
+    {
+      "line": "Español",
+      "station": "Nativo (100%)"
+    },
+    {
+      "line": "Inglés",
+      "station": "B2 Certificado (85%)"
+    },
+    {
+      "line": "LSC",
+      "station": "Lengua de Señas Colombiana (25%)"
+    }
+  ],
+  "gallery": [
+    {
+      "src": "/images/gallery/1000203706-01.jpeg",
+      "alt": "Galería — café de especialidad"
+    },
+    {
+      "src": "/images/gallery/1000209047-01.jpeg",
+      "alt": "Galería — café de especialidad"
+    },
+    {
+      "src": "/images/gallery/20220509_194250.jpg",
+      "alt": "Galería — café de especialidad"
+    },
+    {
+      "src": "/images/gallery/20221112_203954~2.jpg",
+      "alt": "Galería — café de especialidad"
+    },
+    {
+      "src": "/images/gallery/20221203_165314.jpg",
+      "alt": "Galería — café de especialidad"
+    },
+    {
+      "src": "/images/gallery/20221203_210752.jpg",
+      "alt": "Galería — café de especialidad"
+    },
+    {
+      "src": "/images/gallery/20230818_192908.jpg",
+      "alt": "Galería — café de especialidad"
+    },
+    {
+      "src": "/images/gallery/20240210_175709.jpg",
+      "alt": "Galería — café de especialidad"
+    },
+    {
+      "src": "/images/gallery/20240323_203536.jpg",
+      "alt": "Galería — café de especialidad"
+    },
+    {
+      "src": "/images/gallery/20240325_140545.jpg",
+      "alt": "Galería — café de especialidad"
+    },
+    {
+      "src": "/images/gallery/20241224_234240.jpg",
+      "alt": "Galería — café de especialidad"
+    },
+    {
+      "src": "/images/gallery/20250117_221559.jpg",
+      "alt": "Galería — café de especialidad"
+    },
+    {
+      "src": "/images/gallery/20250314_221907.jpg",
+      "alt": "Galería — café de especialidad"
+    },
+    {
+      "src": "/images/gallery/20250610_152054.jpg",
+      "alt": "Galería — café de especialidad"
+    },
+    {
+      "src": "/images/gallery/20250626_200958.jpg",
+      "alt": "Galería — café de especialidad"
+    },
+    {
+      "src": "/images/gallery/20250701_215459.jpg",
+      "alt": "Galería — café de especialidad"
+    },
+    {
+      "src": "/images/gallery/20250706_171606.jpg",
+      "alt": "Galería — café de especialidad"
+    },
+    {
+      "src": "/images/gallery/20251004_214653.jpg",
+      "alt": "Galería — café de especialidad"
+    },
+    {
+      "src": "/images/gallery/20251226_185743.jpg",
+      "alt": "Galería — café de especialidad"
+    },
+    {
+      "src": "/images/gallery/20260106_175504.jpg",
+      "alt": "Galería — café de especialidad"
+    },
+    {
+      "src": "/images/gallery/20260110_173517.jpg",
+      "alt": "Galería — café de especialidad"
+    },
+    {
+      "src": "/images/gallery/20260117_200631.jpg",
+      "alt": "Galería — café de especialidad"
+    },
+    {
+      "src": "/images/gallery/IMG_20181031_155835617_HDR.jpg",
+      "alt": "Galería — café de especialidad"
+    },
+    {
+      "src": "/images/gallery/IMG_20190629_173848158_HDR.jpg",
+      "alt": "Galería — café de especialidad"
+    },
+    {
+      "src": "/images/gallery/IMG_20191014_140941.jpg",
+      "alt": "Galería — café de especialidad"
+    },
+    {
+      "src": "/images/gallery/IMG_20191214_103508.jpg",
+      "alt": "Galería — café de especialidad"
+    },
+    {
+      "src": "/images/gallery/IMG-20210216-WA0067-01.jpeg",
+      "alt": "Galería — café de especialidad"
+    },
+    {
+      "src": "/images/gallery/IMG_20210329_184130.jpg",
+      "alt": "Galería — café de especialidad"
+    },
+    {
+      "src": "/images/gallery/IMG-20211206-WA0042.jpg",
+      "alt": "Galería — café de especialidad"
+    },
+    {
+      "src": "/images/gallery/IMG-20211206-WA0045.jpg",
+      "alt": "Galería — café de especialidad"
+    },
+    {
+      "src": "/images/gallery/IMG-20220903-WA0034.jpg",
+      "alt": "Galería — café de especialidad"
+    },
+    {
+      "src": "/images/gallery/IMG_4360.JPG",
+      "alt": "Galería — café de especialidad"
+    },
+    {
+      "src": "/images/gallery/IMG_6704.JPG",
+      "alt": "Galería — café de especialidad"
+    },
+    {
+      "src": "/images/gallery/IMG_6813.JPG",
+      "alt": "Galería — café de especialidad"
+    },
+    {
+      "src": "/images/gallery/VideoCapture_20240718-210349.jpg",
+      "alt": "Galería — café de especialidad"
+    }
+  ],
+  "press": [
+    {
+      "source": "Creativo",
+      "quote": "Encuentro soluciones innovadoras combinando técnica y sensibilidad.",
+      "url": null
+    },
+    {
+      "source": "Adaptable",
+      "quote": "Capaz de trabajar bajo presión y liderar equipos con enfoque organizado.",
+      "url": null
+    },
+    {
+      "source": "Problem Solver",
+      "quote": "Orientado a resultados. Cada reto es una oportunidad de mejora.",
+      "url": null
+    }
+  ],
+  "notices": [
+    "CERTIFICADO SCA — BÁSICO Y MEDIO",
+    "EST. ADMINISTRACIÓN DE EMPRESAS — UDEA",
+    "CAFÉ DE ESPECIALIDAD"
+  ],
+  "social": {
+    "instagram": null
+  },
+  "seo": {
+    "metaTitle": "Samu Alvarez · Barista Certificado SCA | Portafolio Personal",
+    "metaDescription": "Ian Samuel Álvarez — Barista certificado por la Specialty Coffee Association (SCA) en niveles Básico y Medio. Estudiante de Administración de Empresas. Portafolio personal, blog y servicios de café de especialidad en Medellín, Colombia."
+  },
+  "articles": [
+    {
+      "slug": "mi-experiencia-certificacion-sca",
+      "title": "Mi experiencia con la certificación Barista Skills SCA",
+      "excerpt": "Cómo fue mi proceso de certificación en niveles Básico y Medio con la Specialty Coffee Association.",
+      "date": "2026-05-15",
+      "author": "Samu Alvarez",
+      "coverImage": "/images/gallery/20250117_221559.jpg",
+      "markdownFile": "mi-experiencia-certificacion-sca.md"
+    },
+    {
+      "slug": "el-arte-del-latte",
+      "title": "El arte del latte: una introducción",
+      "excerpt": "Fundamentos del latte art y cómo empezar a practicar diseños básicos.",
+      "date": "2026-05-20",
+      "author": "Samu Alvarez",
+      "coverImage": "/images/gallery/20240210_175709.jpg",
+      "markdownFile": "el-arte-del-latte.md"
+    },
+    {
+      "slug": "cafe-administracion-perfecta-combinacion",
+      "title": "Café y administración: una combinación perfecta",
+      "excerpt": "Reflexiones sobre cómo la formación empresarial complementa el oficio del barista.",
+      "date": "2026-05-25",
+      "author": "Samu Alvarez",
+      "coverImage": "/images/gallery/20241224_234240.jpg",
+      "markdownFile": "cafe-administracion-perfecta-combinacion.md"
+    }
+  ],
+  "about": {
+    "title": "Sobre mí",
+    "intro": "Soy estudiante de Administración de Empresas en la Universidad de Antioquia y barista certificado por la SCA en niveles Básico y Medio. Mi pasión por el café de especialidad se combina con una sólida formación en gestión empresarial — entiendo el negocio desde la barra hasta la administración.",
+    "cta": "Conoce mi historia completa"
+  }
+}

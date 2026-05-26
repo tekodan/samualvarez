@@ -1,0 +1,95 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Header from '../components/Header.astro';
+import InfoBar from '../components/InfoBar.astro';
+import Tagline from '../components/Tagline.astro';
+import Menu from '../components/Menu.astro';
+import Gallery from '../components/Gallery.astro';
+import Press from '../components/Press.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
+import siteData from '../data/site.json';
+---
+
+<Layout>
+  <Navbar />
+  <Header />
+  <InfoBar />
+  
+  <main id="main-content">
+    <Tagline />
+
+    <section class="about-intro section section--alt" aria-labelledby="about-intro-title">
+      <div class="container container--narrow">
+        <h2 id="about-intro-title" class="section__title">
+          <a href="/sobre-mi" class="section__title-link">{siteData.about.title}</a>
+        </h2>
+        <div class="about-intro__content">
+          <div class="about-intro__avatar">
+            <img src="/images/profile.jpg" alt={siteData.name} class="about-intro__avatar-img" />
+          </div>
+          <p class="about-intro__text">{siteData.about.intro}</p>
+          <a href="/sobre-mi" class="btn btn--primary">{siteData.about.cta}</a>
+        </div>
+      </div>
+    </section>
+
+    <Menu />
+    <Gallery />
+    <Press />
+    <Contact />
+  </main>
+  
+  <Footer />
+</Layout>
+
+<style is:global>
+  section[id] {
+    scroll-margin-top: 120px;
+  }
+  
+  @media (max-width: 640px) {
+    section[id] {
+      scroll-margin-top: 80px;
+    }
+  }
+
+  .about-intro {
+    text-align: center;
+  }
+
+  .about-intro__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-6);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .about-intro__avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid var(--color-primary);
+    overflow: hidden;
+    background: var(--color-bg-mid);
+  }
+
+  .about-intro__avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .about-intro__text {
+    font-family: var(--font-heading);
+    font-size: var(--text-lg);
+    line-height: var(--leading-relaxed);
+    color: var(--color-text);
+    font-style: italic;
+    margin: 0;
+  }
+</style>

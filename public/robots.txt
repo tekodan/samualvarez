@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://samualvarez.com/sitemap-index.xml

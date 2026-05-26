@@ -1,0 +1,96 @@
+---
+import siteData from '../data/site.json';
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { 
+  title = siteData.seo.metaTitle, 
+  description = siteData.seo.metaDescription 
+} = Astro.props;
+
+const currentUrl = Astro.url;
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Ian Samuel Álvarez",
+  "description": description,
+  "url": currentUrl.origin,
+  "telephone": siteData.phone,
+  "email": siteData.email,
+  "jobTitle": "Barista Certificado SCA",
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "Universidad de Antioquia"
+  },
+  "knowsLanguage": ["Español", "Inglés", "Lengua de Señas Colombiana"],
+  "image": `${currentUrl.origin}/images/logo.svg`
+};
+---
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    
+    <link rel="stylesheet" href="/base.css" />
+    
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link 
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+3:wght@400;600;700&display=swap" 
+      rel="stylesheet" 
+    />
+    
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={currentUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={`${currentUrl.origin}/images/logo.svg`} />
+    <meta property="og:locale" content="es_CO" />
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={currentUrl} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={`${currentUrl.origin}/images/logo.svg`} />
+    
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content={siteData.name} />
+    <link rel="canonical" href={currentUrl} />
+    
+    <meta name="theme-color" content="#1a1a18" />
+    <meta name="msapplication-TileColor" content="#1a1a18" />
+    
+    <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+    <meta name="generator" content={Astro.generator} />
+  </head>
+  <body>
+    <a href="#main-content" class="sr-only">Saltar al contenido principal</a>
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  html {
+    scroll-padding-top: 60px;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+</style>

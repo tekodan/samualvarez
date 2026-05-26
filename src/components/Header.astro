@@ -1,0 +1,206 @@
+---
+import siteData from '../data/site.json';
+
+const slides = siteData.gallery.slice(0, 8).map(img => img.src);
+---
+
+<header class="header" id="top">
+  <div class="header__slides">
+    {slides.map((src, i) => (
+      <div class="header__slide" style={`background-image: url('${src}'); animation-delay: ${i * 5}s;`}></div>
+    ))}
+  </div>
+
+  <div class="header__overlay"></div>
+
+  <div class="header__content">
+    <div class="header__logo-wrapper">
+      <img 
+        src="/images/logo.svg" 
+        alt={siteData.shortName} 
+        class="header__logo-img"
+        width="200"
+        height="60"
+      />
+    </div>
+    <p class="header__subtitle">Barista Certificado SCA · Administración de Empresas</p>
+    <div class="header__birthday">
+      <p class="header__birthday-text">&#127881; ¡Feliz cumpleaños, hijo!</p>
+      <p class="header__birthday-msg">Quise regalarte algo hecho con mis manos e IA. Una muestra de cariño en tus 20 años. Sabes que te amo mucho. Luego lo modificamos. ¡Un abrazo!</p>
+    </div>
+    <p class="header__established">Desde {siteData.established}</p>
+  </div>
+  
+  <div class="header__decoration" aria-hidden="true">
+    <span class="header__line"></span>
+    <span class="header__diamond">◇</span>
+    <span class="header__line"></span>
+  </div>
+</header>
+
+<style>
+  .header {
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: var(--space-16) var(--space-4);
+    position: relative;
+    overflow: hidden;
+    background: var(--color-bg-deep);
+  }
+
+  .header__slides {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+
+  .header__slide {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    animation: heroSlide 40s infinite;
+  }
+
+  @keyframes heroSlide {
+    0% { opacity: 0; }
+    3% { opacity: 1; }
+    10% { opacity: 1; }
+    13% { opacity: 0; }
+    100% { opacity: 0; }
+  }
+
+  .header__overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: 
+      radial-gradient(ellipse at center, rgba(26, 26, 24, 0.5) 0%, rgba(26, 26, 24, 0.85) 70%),
+      var(--color-bg-deep);
+    opacity: 0.92;
+  }
+
+  .header__content {
+    position: relative;
+    z-index: 2;
+  }
+
+  .header__logo-wrapper {
+    margin-bottom: var(--space-6);
+  }
+
+  .header__logo-img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+    margin: 0 auto;
+    filter: drop-shadow(0 2px 8px rgba(0,0,0,0.6));
+  }
+
+  .header__title {
+    font-size: var(--text-4xl);
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-secondary);
+    margin-bottom: var(--space-3);
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.7);
+  }
+
+  .header__subtitle {
+    font-family: var(--font-body);
+    font-size: var(--text-lg);
+    color: var(--color-primary);
+    letter-spacing: 0.05em;
+    margin: 0;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+  }
+
+  .header__established {
+    font-family: var(--font-heading);
+    font-size: var(--text-base);
+    font-style: italic;
+    color: var(--color-text-muted);
+    letter-spacing: 0.1em;
+    margin-top: var(--space-2);
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
+  }
+
+  .header__birthday {
+    margin-top: var(--space-6);
+    padding: var(--space-4);
+    background: rgba(201, 162, 39, 0.08);
+    border: 1px solid rgba(201, 162, 39, 0.25);
+    border-radius: var(--radius-md);
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .header__birthday-text {
+    font-family: var(--font-heading);
+    font-size: var(--text-2xl);
+    font-weight: 700;
+    color: var(--color-primary);
+    margin: 0 0 var(--space-2);
+    letter-spacing: 0.05em;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .header__birthday-msg {
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    color: var(--color-secondary);
+    line-height: var(--leading-relaxed);
+    margin: 0;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
+    font-style: italic;
+  }
+
+  .header__decoration {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-4);
+    margin-top: var(--space-10);
+    color: var(--color-primary);
+    position: relative;
+    z-index: 2;
+  }
+
+  .header__line {
+    width: 80px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--color-primary), transparent);
+  }
+
+  .header__diamond {
+    font-size: var(--text-lg);
+    opacity: 0.8;
+  }
+
+  @media (max-width: 640px) {
+    .header {
+      min-height: 70vh;
+      padding: var(--space-12) var(--space-4);
+    }
+
+    .header__title {
+      font-size: var(--text-2xl);
+      letter-spacing: 0.1em;
+    }
+
+    .header__subtitle {
+      font-size: var(--text-sm);
+    }
+
+    .header__line {
+      width: 50px;
+    }
+  }
+</style>

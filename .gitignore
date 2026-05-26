@@ -1,0 +1,31 @@
+# build output
+dist/
+.netlify/
+.vercel/
+
+# dependencies
+node_modules/
+
+# env
+.env
+.env.*
+!.env.example
+
+# editor / OS
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# logs
+*.log
+npm-debug.log*
+
+# astro
+.astro/
+
+# temp
+tmp/
